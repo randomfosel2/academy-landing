@@ -4,11 +4,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "엑설런스 아카데미 | 1:1 맞춤지도 초중고 영수전문학원",
-  description: "초·중·고 1:1 밀착형 개별 맞춤지도 영수 전문 엑설런스 아카데미입니다. 학생 개개인의 수준 분석과 맞춤 피드백을 통해 확실한 성적 향상을 이끕니다.",
+  title: "성적이 오르는 1:1 영수전문, 엑설런스 아카데미",
+  description: "우리 아이만을 위한 맞춤 학습 솔루션! 체계적인 커리큘럼과 밀착 오답 관리를 통해 기초 확립부터 심화 정복까지 빈틈없이 지도합니다.",
   openGraph: {
-    title: "엑설런스 아카데미 | 1:1 맞춤지도 초중고 영수전문학원",
-    description: "초·중·고 1:1 밀착형 개별 맞춤지도 영수 전문 엑설런스 아카데미입니다. 학생 개개인의 수준 분석과 맞춤 피드백을 통해 확실한 성적 향상을 이끕니다.",
+    title: "성적이 오르는 1:1 영수전문, 엑설런스 아카데미",
+    description: "우리 아이만을 위한 맞춤 학습 솔루션! 체계적인 커리큘럼과 밀착 오답 관리를 통해 기초 확립부터 심화 정복까지 빈틈없이 지도합니다.",
     images: [
       {
         url: "/og-image.png",
