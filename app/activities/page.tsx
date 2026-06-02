@@ -21,48 +21,48 @@ export default function Activities() {
       id: 1,
       category: "학원 생활",
       date: "2024년 10월 24일",
-      title: "신규 과학 기술 센터 개관: 더 넓은 세계로의 도약",
-      desc: "최첨단 과학 기술 센터의 개관 소식을 전해드립니다. 로보틱스, 생명공학, 지속 가능한 공학 분야에서 학생들이 직접 실습하며 꿈을 키워나갈 수 있는 최적의 환경을 제공합니다.",
+      title: "겨울방학 대비 1:1 영수 개별 진도 지도 설명회 개최",
+      desc: "학부모님들을 모시고 자녀의 학습 성향 및 과목별 취약점 분석, 그리고 이번 겨울방학 동안 진행될 1:1 개인 맞춤형 영어·수학 학습 진도 플랜을 상세히 설명해 드리는 자리를 마련했습니다.",
       imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAawSQpnmqxLite3aO6IeXNCOBvSyCx0dtLorL8YuOFWGkyztO6oOvwckocJcCmT3WKEiLce3WDtktx6f5qiyb5HjG0MOusdaZwMA06gFWH-fCl_Mo8IIZ3BTPmzmgw60Cg9UiucU6P7J06xQGYggN9NApgQDR65j230KUoL0HGdI0Tk-UV7ikvtHtJETyf8EjwNw-vtotTMxlXCSee9545ZS8otVYbBoda3JGkPH_CDDIUMATAvPx8ibl0yGN1olOMrnnUc-S5mT_r"
     },
     {
       id: 2,
       category: "입시 정보",
       date: "2024년 10월 22일",
-      title: "SAT 집중 워크숍 시리즈 안내",
-      desc: "시험 전략 및 핵심 영역 분석을 통해 학생들의 SAT 성적 향상을 이끄는 특별 집중 워크숍 시리즈입니다.",
+      title: "2025학년도 수능 영어·수학 출제 경향 및 1:1 전략",
+      desc: "최근 수능 및 평가원 모의고사의 출제 경향을 면밀히 분석하고, 절대평가 영어 1등급 공략법과 변별력 높은 수리 영역 킬러/준킬러 문항에 대한 개인 맞춤형 대비법을 제시합니다.",
       imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNtxpJY4OqfcmYs2pjJWb87rG3hChIDLAewS9j64tKUHHcZujFfaIBfLhcmc7k01qw0fg57sXwLS2rT9cheSLBu-hhsXrPRAeedit0aGSQrpgr1VwjFplB2h0Hj47VFgXutq-sTQMfZFYRmQVlTqcoXgWyF9jIJe3edI5FusBmFjg8yAhNOtc5-nyUgHSqPi5XpmgfoWuL7yibTSDzVr3sXXBNu0P58IwDjI5UBdz80ewGFpIXQgdsnZkepK85_-16KYmD6m0YPaX6"
     },
     {
       id: 3,
       category: "학생 수상",
       date: "2024년 10월 20일",
-      title: "내셔널 메리트 장학생 최종 선발",
-      desc: "전국 최상위 성적을 기록하며 엑설런스 아카데미에서 2024년 내셔널 메리트 장학생으로 선발된 학생들의 수상을 진심으로 축하합니다.",
+      title: "2학기 중간고사 내신 우수 및 성적 수직 상승생 발표",
+      desc: "철저한 1:1 오답 관리와 밀착 지도를 통해 이번 2학기 중간고사에서 영어·수학 1등급을 달성하거나 성적이 큰 폭으로 향상된 엑설런스 아카데미 원생들을 칭찬하고 축하합니다.",
       imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD3oGSApJdC1B9OSSauPTTGsI6SopIZOER95sfCD7_5GodPitSYwNrsG8kyjZwFy8cwWfWxsu1RvUgc4JEdM7uEZOxAC5VadtUCQz4OE4z4xX3TPzczscvWXA1kJ3t9KpILi5HTDKbRYoTiZ6GQljw01P1sB7YtS3IxIvKpVW0jDSPzdvYR2ayGDDzhUqAH5biZfcKE8QtsB4KdpqreqWaUAUKIlVFdonIOFpEGyq1TokYPws5QnPepXGXt78VD0f_Ezk8E-oYtWB0B"
     },
     {
       id: 4,
       category: "학원 생활",
       date: "2024년 10월 18일",
-      title: "인문학 신규 교육과정: 비판적 사고의 함양",
-      desc: "K-12 인문학 프로그램에 철학과 글로벌 윤리를 통합하여 한층 더 깊이 있고 폭넓은 학습 기회를 학생들에게 제공합니다.",
+      title: "초등부 이스턴영어 파닉스 및 매일 영단어 녹음 챌린지",
+      desc: "초등 저학년 학생들이 영어에 흥미를 느끼고 스스로 공부하는 습관을 기를 수 있도록 마련된 파닉스 발음 및 일일 영단어 말하기 녹음 챌린지 활동 소식을 전해드립니다.",
       imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0-wgEG9IIJ50RODWvrCAYhc9cwtGVIos9ExDYRtCoTNAaNxEIYEUrz5fidQ0ep8lxl2qZ4BzhTbzW9xp1Q4BgR03Qfp75THBbJA_w_L3Rui5v-hC-dNZBlg9OjTrDViBYV0Ds_P1PnAD8johdiwwlZWOBU_awMnM4LSFT7s-UegsOC-6vu87OLLV4jaEVLD74M0y3BzHIOl3pK4OJVi0plLn7U0DTzdWLBQBy9xtEpqC12eRttYGTNgHTqvmIFG694C_TH860PSPP"
     },
     {
       id: 5,
       category: "학생 수상",
       date: "2024년 10월 15일",
-      title: "축구 대표팀 우승: 역사적인 시즌 마무리",
-      desc: "우리 아카데미 대표 이글스 팀이 치열한 지역 결승전에서 승리하여 트로피를 차지하며 최고의 팀워크와 스포츠맨십을 입증했습니다.",
+      title: "전국 영어·수학 학력평가(HME) 우수 성적 및 수상 달성",
+      desc: "본원의 체계적인 1:1 맞춤 모의 훈련과 개별 첨삭 지도를 바탕으로 전국 단위 영수 학력평가에 응시하여 다수의 원생들이 최우수상 및 메달을 획득하는 빛나는 성과를 거두었습니다.",
       imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtJZ9sZeQp9l213UW2etqsh2n3Kk9EB9sl-5dsmaJuHFaI1118q5fciUrdffKvm6csTXgKJqfCYUepztwyC-j9unnvVKmquC8QYiihxUW5SjpnnSsw11b9EvjBFoikp_2UEoWDQqAzWIHwp-vE-Es_Djkj_wFdmBDaa9AThz7OaumZq6qJ7H3hUp70lYgqZ5UMuMb9O9XvBrUQuFgA_sIan0k8S77pOuzoaVp3GXexMQn9TW91ix0EQVXAufrLNfKEYENhO_gnr3rk"
     },
     {
       id: 6,
       category: "입시 정보",
       date: "2024년 10월 12일",
-      title: "효과적인 스피치 기법: 워크숍 하이라이트",
-      desc: "최근에 성황리에 개최된 스피치 및 설득 기술 워크숍에서 참가 학생들은 세련된 프레젠테이션 수사학적 기량을 연마했습니다.",
+      title: "인근 학교별 기출 분석 기반 수행평가 일대일 집중 관리",
+      desc: "중·고등부 내신 관리를 정밀하게 밀착 지원하기 위해 학교별 최근 3개년 기출 족보를 분석하여 맞춤 오답 풀이를 지도하고 영어 서술형 수행평가를 1:1로 집중 지도합니다.",
       imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZnHTwG02su3DhsJ864cUxzzNV3GohNuZHRVnBD4B3dhwGKz0bakOFHLjI6UnMDKO_H95Q_oKJfjQBRuUydM7ciaL0wxSQTpnpvfrVZyK8qdSli9BRoDDl0qhafnuCSBAFieDTUYke5Gho4yrYV-heQSH5Mg019CF2exD-sbZXgFN9VUgPYoBYHBFPhB9vL4Yl21G4x_-J1QNCSshr6D2EvF-zEfzwINHNU1yE9LIwfVJyTXvNrVGC2aaSLo-WuX14BgMLtw_7mftf"
     }
   ];
@@ -93,7 +93,7 @@ export default function Activities() {
           원내 활동 및 <span className="italic-highlight">소식</span>
         </h1>
         <p className="text-sm md:text-base text-slate-500 leading-relaxed font-medium">
-          학생들의 눈부신 성취부터 다양한 방과 후 활동까지, Excellence Academy의 활기찬 일상을 만나보세요.
+          학생들의 성적 향상 스토리부터 유익한 입시 정보, 엑설런스 아카데미의 생생한 교육 소식을 만나보세요.
         </p>
       </header>
 
