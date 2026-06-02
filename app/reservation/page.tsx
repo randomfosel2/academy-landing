@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import Icon from "../../components/Icon";
 
@@ -10,7 +10,9 @@ interface TimeSlot {
 }
 
 export default function Reservation() {
-  const [selectedDate, setSelectedDate] = useState<number>(11);
+  const [currentYear, setCurrentYear] = useState<number>(2026);
+  const [currentMonth, setCurrentMonth] = useState<number>(5); // 0-indexed (5 = June)
+  const [selectedDate, setSelectedDate] = useState<number>(2);
   const [selectedTime, setSelectedTime] = useState<string>("오후 01:00");
   const [studentLevel, setStudentLevel] = useState<"elem" | "middle" | "high">("elem");
   const [grade, setGrade] = useState<string>("1");
@@ -22,10 +24,38 @@ export default function Reservation() {
   
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState<boolean>(false);
 
-  // November 2024 Mock Calendar details
-  const startDayOffset = 5; // Nov 1st 2024 is Friday (0=Sun, 1=Mon, ..., 5=Fri)
-  const totalDays = 30;
-  const reservedDates = [1, 2, 5, 9, 15, 16, 23, 24, 30]; // Mock unavailable dates
+  useEffect(() => {
+    const today = new Date();
+    setCurrentYear(today.getFullYear());
+    setCurrentMonth(today.getMonth());
+    setSelectedDate(today.getDate());
+  }, []);
+
+  const handlePrevMonth = () => {
+    const today = new Date();
+    if (currentYear < today.getFullYear() || (currentYear === today.getFullYear() && currentMonth <= today.getMonth())) {
+      return;
+    }
+    if (currentMonth === 0) {
+      setCurrentYear(prev => prev - 1);
+      setCurrentMonth(11);
+    } else {
+      setCurrentMonth(prev => prev - 1);
+    }
+    setSelectedDate(1);
+  };
+
+  const handleNextMonth = () => {
+    if (currentMonth === 11) {
+      setCurrentYear(prev => prev + 1);
+      setCurrentMonth(0);
+    } else {
+      setCurrentMonth(prev => prev + 1);
+    }
+    setSelectedDate(1);
+  };
+
+  const reservedDates: number[] = []; // Mock unavailable dates
 
   const timeSlots: TimeSlot[] = [
     { time: "오전 10:00", isAvailable: true },
@@ -65,7 +95,7 @@ export default function Reservation() {
       schoolName: schoolName || "(기입 안 함)",
       studentName: studentName || "(기입 안 함)",
       notes: notes || "(기입 안 함)",
-      date: `2024년 11월 ${selectedDate}일`,
+      date: `${currentYear}년 ${currentMonth + 1}월 ${selectedDate}일`,
       time: selectedTime,
       status: "접수대기",
       createdAt: new Date().toISOString(),
@@ -93,7 +123,8 @@ export default function Reservation() {
     setSchoolName("");
     setStudentName("");
     setNotes("");
-    setSelectedDate(11);
+    const today = new Date();
+    setSelectedDate(today.getDate());
     setSelectedTime("오후 01:00");
     setStudentLevel("elem");
     setGrade("1");
@@ -102,32 +133,45 @@ export default function Reservation() {
   // Render calendar days
   const calendarCells = [];
   
-  // Previous month mock days (Oct 27 - 31)
-  const prevMonthDays = [27, 28, 29, 30, 31];
-  prevMonthDays.forEach((d) => {
+  const startDayOffset = new Date(currentYear, currentMonth, 1).getDay();
+  const monthTotalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
+  const prevMonthTotalDays = new Date(currentYear, currentMonth, 0).getDate();
+
+  // Previous month fill days
+  for (let i = startDayOffset - 1; i >= 0; i--) {
+    const d = prevMonthTotalDays - i;
     calendarCells.push(
-      <div key={`prev-${d}`} className="p-3 text-center text-slate-300 text-xs font-semibold">
+      <div key={`prev-${d}`} className="p-3 text-center text-slate-300 text-xs font-semibold select-none">
         {d}
       </div>
     );
-  });
+  }
 
-  // Current month days (Nov 1 - 30)
-  for (let d = 1; d <= totalDays; d++) {
-    const isReserved = reservedDates.includes(d);
+  // Current month days
+  const today = new Date();
+  const todayYear = today.getFullYear();
+  const todayMonth = today.getMonth();
+  const todayDate = today.getDate();
+
+  for (let d = 1; d <= monthTotalDays; d++) {
+    const isPast = 
+      currentYear < todayYear ||
+      (currentYear === todayYear && currentMonth < todayMonth) ||
+      (currentYear === todayYear && currentMonth === todayMonth && d < todayDate);
+      
     const isSelected = selectedDate === d;
     const dayOfWeek = (startDayOffset + d - 1) % 7;
     let colorClass = "text-slate-700";
     if (dayOfWeek === 0) colorClass = "text-red-500"; // Sunday
     if (dayOfWeek === 6) colorClass = "text-blue-500"; // Saturday
 
-    if (isReserved) {
+    if (isPast) {
       calendarCells.push(
         <button
           key={`day-${d}`}
           type="button"
           disabled
-          className="w-10 h-10 mx-auto flex items-center justify-center rounded-full text-slate-300 bg-slate-50/50 cursor-not-allowed text-xs font-bold"
+          className="w-10 h-10 mx-auto flex items-center justify-center rounded-full text-slate-300 bg-slate-50/20 cursor-not-allowed text-xs font-bold"
         >
           {d}
         </button>
@@ -181,12 +225,21 @@ export default function Reservation() {
         
         <div className="mb-8">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="font-bold text-sm text-slate-800">2024년 11월</h3>
+            <h3 className="font-bold text-sm text-slate-800">{currentYear}년 {currentMonth + 1}월</h3>
             <div className="flex gap-2">
-              <button type="button" className="w-8 h-8 flex items-center justify-center border border-slate-200 hover:bg-slate-50 rounded-full transition-colors text-slate-600">
+              <button
+                type="button"
+                onClick={handlePrevMonth}
+                disabled={currentYear < today.getFullYear() || (currentYear === today.getFullYear() && currentMonth <= today.getMonth())}
+                className="w-8 h-8 flex items-center justify-center border border-slate-200 hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed rounded-full transition-colors text-slate-600"
+              >
                 <Icon name="chevron_left" className="w-4 h-4" />
               </button>
-              <button type="button" className="w-8 h-8 flex items-center justify-center border border-slate-200 hover:bg-slate-50 rounded-full transition-colors text-slate-600">
+              <button
+                type="button"
+                onClick={handleNextMonth}
+                className="w-8 h-8 flex items-center justify-center border border-slate-200 hover:bg-slate-50 rounded-full transition-colors text-slate-600"
+              >
                 <Icon name="chevron_right" className="w-4 h-4" />
               </button>
             </div>
@@ -251,7 +304,7 @@ export default function Reservation() {
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           {/* Selected Info Summary Tag */}
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-wrap gap-4 text-xs font-bold text-slate-600 justify-between">
-            <div>선택된 날짜: <span className="text-secondary font-extrabold">2024년 11월 {selectedDate}일</span></div>
+            <div>선택된 날짜: <span className="text-secondary font-extrabold">{currentYear}년 {currentMonth + 1}월 {selectedDate}일</span></div>
             <div>선택된 시간: <span className="text-secondary font-extrabold">{selectedTime}</span></div>
           </div>
 
