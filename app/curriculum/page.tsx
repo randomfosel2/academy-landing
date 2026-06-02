@@ -101,7 +101,7 @@ export default function Curriculum() {
       {/* Content Area */}
       <div className="min-h-[500px]">
         <div className="animate-fadeIn">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 border-b border-slate-200/50 pb-8">
+          <div className="mb-12 border-b border-slate-200/50 pb-8">
             <div className="max-w-2xl space-y-2">
               <h2 className="text-2xl md:text-3xl font-extrabold text-primary font-display">
                 {currentCurriculum.title}
@@ -110,10 +110,6 @@ export default function Curriculum() {
                 {currentCurriculum.description}
               </p>
             </div>
-            <button className="flex items-center gap-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 px-6 py-3 rounded-full font-bold text-xs shadow-sm transition-all active:scale-95">
-              <Icon name="download" className="w-4 h-4" />
-              실라버스 및 커리큘럼 가이드 다운로드
-            </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
