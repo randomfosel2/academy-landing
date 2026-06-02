@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Icon from "../../components/Icon";
 
 export default function Contact() {
@@ -171,27 +170,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* CTA Section - Inspired by Monie Success CTA banner */}
-      <section className="text-center">
-        <div className="bg-[#0f1e36] p-8 md:p-12 rounded-[32px] text-slate-300 border border-slate-800 shadow-lg relative overflow-hidden">
-          <div className="absolute right-0 bottom-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3 font-display">방문 상담을 신청하세요</h2>
-          <p className="text-xs md:text-sm text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed font-semibold">
-            매주 화요일과 목요일에 학부모님을 위한 개별 캠퍼스 투어를 진행하고 있습니다. 교육 시설과 면학 분위기를 직접 확인하실 수 있도록 미리 투어를 신청해 보세요.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/reservation"
-              className="bg-secondary text-white px-8 py-3.5 rounded-full font-bold text-xs hover:opacity-95 shadow-md shadow-secondary/15 transition-all premium-glow-btn"
-            >
-              캠퍼스 투어 예약하기
-            </Link>
-            <button className="border border-slate-600 text-slate-300 hover:text-white px-8 py-3.5 rounded-full font-bold text-xs hover:bg-white/5 transition-all active:scale-95">
-              캠퍼스 안내도 다운로드 (PDF)
-            </button>
-          </div>
-        </div>
-      </section>
+
     </main>
   );
 }
