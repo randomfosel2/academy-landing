@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "엑설런스 아카데미 | 탁월한 미래를 향한 교육",
-  description: "학문적 엄격함과 기관의 안정성을 바탕으로 K-12 학생들을 위한 체계적인 교육 환경을 제공합니다.",
+  title: "엑설런스 아카데미 | 1:1 맞춤지도 초중고 영수전문학원",
+  description: "초·중·고 1:1 밀착형 개별 맞춤지도 영수 전문 엑설런스 아카데미입니다. 학생 개개인의 수준 분석과 맞춤 피드백을 통해 확실한 성적 향상을 이끕니다.",
 };
 
 export default function RootLayout({

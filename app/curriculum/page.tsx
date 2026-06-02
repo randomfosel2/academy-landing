@@ -22,39 +22,30 @@ export default function Curriculum() {
 
   const curriculumData: Record<"elementary" | "middle" | "high", CurriculumLevel> = {
     elementary: {
-      title: "초등 기초 프로그램",
-      description: "K-5학년을 위한 기초 문해력, 수리력 및 사회적·정서적 성장에 중점을 둡니다.",
+      title: "초등 영수 개별 맞춤 과정",
+      description: "초등 1-6학년 학생들을 대상으로 영어와 수학의 기초를 다지고, 공부하는 습관을 형성합니다.",
       subjects: [
-        { icon: "menu_book", title: "국어 (Language Arts)", desc: "몰입형 스토리텔링을 통해 파닉스, 독해력 및 창의적 글쓰기 능력을 배양합니다.", badge: "초등 1-6" },
-        { icon: "calculate", title: "수학 (Mathematics)", desc: "구체물 조작과 문제 해결을 통해 탄탄한 수의 기초와 논리력을 구축합니다.", badge: "초등 1-6" },
-        { icon: "science", title: "탐구 과학 (Inquiry Science)", desc: "지도된 실험과 관찰을 통해 자연 세계를 탐구하고 과학적 원리를 이해합니다.", badge: "초등 3-6" },
-        { icon: "palette", title: "미술 (Visual Arts)", desc: "다양한 예술 매체를 활용하여 자기표현과 소근육 발달을 도모합니다.", badge: "초등 1-4" },
-        { icon: "public", title: "사회 (Social Studies)", desc: "지역 사회와 역사, 그리고 세계 시민 의식의 기초를 이해합니다.", badge: "초등 2-5" },
-        { icon: "fitness_center", title: "체육 (Physical Education)", desc: "신체 활동과 협동 놀이를 통해 팀워크와 건강한 습관을 기릅니다.", badge: "초등 전학년" }
+        { icon: "translate", title: "초등 영어 (이스턴영어)", desc: "영어 발음과 파닉스부터 일상 회화, 교과 연계 단어 및 기본 문장 구조를 개별 학습 속도에 맞추어 마스터합니다.", badge: "초등 1-6" },
+        { icon: "calculate", title: "초등 수학 (개념 & 연산)", desc: "1:1 집중 지도를 통해 탄탄한 연산 기초와 수학적 사고력을 확립하고, 개인 맞춤형 문장제 문제 풀이 능력을 배양합니다.", badge: "초등 1-6" },
+        { icon: "assignment_turned_in", title: "일대일 일일 피드백", desc: "매 수업마다 오답 노트를 작성하고 1:1 개별 첨삭과 피드백을 진행하여 단 한 명의 학생도 뒤처지지 않도록 관리합니다.", badge: "초등 전학년" }
       ]
     },
     middle: {
-      title: "중등 탐구 과정",
-      description: "6-8학년을 대상으로 독립적 사고와 심화된 과목 탐색을 장려합니다.",
+      title: "중등 영수 내신 대비 과정",
+      description: "중등 1-3학년을 대상으로 학교별 내신 만점과 특목고/자사고 진학을 위한 심화 학습을 지원합니다.",
       subjects: [
-        { icon: "functions", title: "수학 (Mathematics)", desc: "구체적인 수의 개념에서 추상적 추론과 공간 개념으로 전환하는 기초 대수 및 기하를 학습합니다.", badge: "중등 1-3" },
-        { icon: "biotech", title: "생명 및 지구 과학", desc: "생물학, 생태학 및 지구의 지질학적 과정에 대한 심도 있는 탐구를 수행합니다.", badge: "중등 2-3" },
-        { icon: "history_edu", title: "세계사 (World History)", desc: "문명의 발생과 역사적 사건이 현대 세계에 미친 영향을 분석합니다.", badge: "중등 1-2" },
-        { icon: "translate", title: "외국어 (Foreign Language)", desc: "회화 유창성과 문화 이해에 중점을 둔 스페인어 또는 프랑스어 입문 과정을 제공합니다.", badge: "중등 전학년" },
-        { icon: "computer", title: "디지털 리터러시", desc: "컴퓨터 과학의 기초, 온라인 안전 교육 및 협업을 위한 디지털 도구 활용법을 배웁니다.", badge: "중등 1-3" },
-        { icon: "psychology", title: "윤리 및 상담", desc: "인성 발달, 또래 관계 및 윤리적 의사결정 능력 함양에 집중합니다.", badge: "중등 전학년" }
+        { icon: "history_edu", title: "중등 영어 (문법 & 내신)", desc: "학교별 교과서 완벽 연계 단어/문법 학습, 기출 시험 유형 심화 분석 및 철저한 수행평가 일대일 첨삭을 진행합니다.", badge: "중등 1-3" },
+        { icon: "functions", title: "중등 수학 (대수 & 기하)", desc: "기초 대수와 공간 개념 확립부터 일대일 오답 처리를 통한 난도 높은 심화 문제 및 서술형 평가 정복을 목표로 합니다.", badge: "중등 1-3" },
+        { icon: "analytics", title: "취약점 정밀 분석 리포트", desc: "단원평가 및 주간 학습 리포트를 토대로 개개인의 취약한 유형을 정밀 진단하고 개별 학습 보완 계획을 수립합니다.", badge: "중등 전학년" }
       ]
     },
     high: {
-      title: "고등 심화 과정",
-      description: "9-12학년을 위한 엄격한 대학 입시 준비 과정 및 AP(Advanced Placement) 옵션을 제공합니다.",
+      title: "고등 영수 수능 & 대입 심화",
+      description: "고등 1-3학년 학생들의 대입 성공을 위해 철저한 학교별 내신과 수능 절대평가 1등급을 공략합니다.",
       subjects: [
-        { icon: "terminal", title: "컴퓨터 과학 AP", desc: "고급 프로그래밍 논리, 알고리즘 설계 및 소프트웨어 개발 방법론을 마스터합니다.", badge: "AP 과정" },
-        { icon: "architecture", title: "심화 물리학", desc: "역학, 열역학 및 전자기학에 대한 정량적 분석과 실험을 수행합니다.", badge: "고등 2-3" },
-        { icon: "theater_comedy", title: "공연 예술", desc: "전문적인 수준의 무대 연출, 연극 및 성악 기술을 연마합니다.", badge: "선택 과목" },
-        { icon: "bar_chart", title: "경제 및 시민 교육", desc: "글로벌 시장, 정치 체제 및 개인 재무 관리 능력을 분석하고 함양합니다.", badge: "고등 1-2" },
-        { icon: "menu_book", title: "문학 분석", desc: "고전 및 현대 문학에 대한 비판적 고찰과 설득력 있는 수사학을 학습합니다.", badge: "고등 전학년" },
-        { icon: "microscope", title: "분자 생물학", desc: "유전학 및 세포 과정을 탐구하는 집중적인 실험 중심 강좌를 제공합니다.", badge: "AP 과정" }
+        { icon: "translate", title: "고등 영어 (수능 & 모의고사)", desc: "EBS 연계 교재 심화 분석, 모의고사 핵심 유형 독해, 어법 완성 및 변형 문제 해결 능력을 1:1 맞춤형으로 기릅니다.", badge: "고등 1-3" },
+        { icon: "calculate", title: "고등 수학 (수능 & 내신)", desc: "수학 I/II, 미적분, 확률과 통계, 기하 등 대입 필수 과목의 수리 개념을 마스터하고 고난도 준킬러/킬러 문항을 대비합니다.", badge: "고등 1-3" },
+        { icon: "psychology", title: "1:1 입시 상담 및 학습 오딧", desc: "학생 개인별 학생부 히스토리와 모의고사 성적을 바탕으로 한 입시 전략 컨설팅 및 밀착형 학습 멘토링을 제공합니다.", badge: "고등 전학년" }
       ]
     }
   };
@@ -67,11 +58,11 @@ export default function Curriculum() {
       <header className="mb-12 text-center max-w-3xl mx-auto space-y-4">
         <span className="text-xs font-bold text-secondary uppercase tracking-widest block">Our Curriculum</span>
         <h1 className="text-3xl md:text-5xl font-extrabold text-primary leading-tight font-display tracking-tight">
-          탁월한 학업 성취를 위한 <br />
-          <span className="italic-highlight">프리미엄 커리큘럼</span>
+          개별 성장을 실현하는 <br />
+          <span className="italic-highlight">1:1 맞춤형 영수 커리큘럼</span>
         </h1>
         <p className="text-sm md:text-base text-slate-500 leading-relaxed font-medium">
-          우리의 커리큘럼은 학생들의 발달 단계에 맞춰 도전 의식을 고취하며, 비판적 사고, 창의성, 그리고 배움에 대한 평생의 열정을 기를 수 있도록 설계되었습니다.
+          엑설런스 아카데미의 커리큘럼은 초·중·고등부 학생들이 스스로 학습 주도성을 가질 수 있도록 수준별 맞춤 진도와 개별 케어 프로그램을 통해 철저한 성적 향상을 이끌어냅니다.
         </p>
       </header>
 

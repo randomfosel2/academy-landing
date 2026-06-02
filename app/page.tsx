@@ -18,7 +18,7 @@ export default function Home() {
             with <span className="italic-highlight">Excellence</span>
           </h1>
           <p className="text-sm md:text-base text-slate-500 max-w-lg leading-relaxed font-medium">
-            체계적인 교과 지도와 학업적 엄격함 속에서 아이의 숨겨진 영재성을 깨웁니다. 엑설런스 아카데미는 K-12 전 학년을 아우르는 학부모 맞춤형 프리미엄 학습 솔루션을 제시합니다.
+            초·중·고 학생들의 학습 상태를 정밀하게 진단하고, 수준별 1:1 밀착 관리를 통해 확실한 성적 향상을 이끌어냅니다. 엑설런스 아카데미는 영어와 수학의 완벽한 개념 확립을 지향하는 1:1 맞춤형 영수 전문 브랜드입니다.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
             <Link
@@ -125,10 +125,10 @@ export default function Home() {
               <span className="underline-highlight">단 하나의 올바른 교육</span>
             </h2>
             <p className="text-sm text-slate-500 leading-relaxed font-medium">
-              엑설런스 아카데미는 규율 잡힌 보살핌 속에서 모든 학생이 비범한 성취를 이룰 수 있는 잠재력을 가지고 있다는 원칙 위에 세워졌습니다. 우리의 성공 역사는 명확한 교수법과 인성 발달이 만나는 체계적인 학습 토대 위에 구축되었습니다.
+              엑설런스 아카데미는 규율 잡힌 보살핌 속에서 모든 학생이 비범한 성취를 이룰 수 있는 잠재력을 가지고 있다는 원칙 위에 세워졌습니다. 1:1 개별 진도표에 입각한 밀착형 영수 관리로, 학생 한 명 한 명의 강점은 극대화하고 취약점은 완벽히 보완합니다.
             </p>
             <p className="text-sm text-slate-500 leading-relaxed font-medium">
-              우리는 권위 있는 교육적 전통과 현대적이고 접근하기 쉬운 교육 전략 사이의 가교 역할을 합니다. 학부모와 학생 모두에게 교육 과정에 대한 깊은 신뢰를 심어주는 동시에, 학습 여정이 체계적이고 관리 가능하도록 보장하는 것이 우리의 목표입니다.
+              우리는 수준 높은 맞춤형 수업과 철저한 교과 내신 분석, 그리고 학습 현황에 대한 정기 오딧 시스템을 통해 아이들의 성장을 돕습니다. 학부모와 학생 모두에게 신뢰를 주며 배움의 즐거움을 함께 나누는 것이 우리의 사명입니다.
             </p>
           </div>
           <div className="relative group">
@@ -156,9 +156,9 @@ export default function Home() {
                 <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
                   <Icon name="school" className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">경험이 풍부한 전문 강사진</h3>
+                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">경험이 풍부한 일대일 강사진</h3>
                 <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                  수년간의 교육 실적을 갖춘 최정상급 교사진이 아이 개개인의 학력 상태를 진단하고 탁월한 학습 몰입을 선사합니다.
+                  일대일 맞춤지도의 풍부한 노하우를 갖춘 영수 전문 강사진이 개별 학습 속도를 분석하여 세심하고 탄탄한 교육을 제공합니다.
                 </p>
               </div>
               <Link href="/curriculum" className="text-xs font-bold text-secondary flex items-center gap-1.5 hover:underline mt-6">
@@ -172,9 +172,9 @@ export default function Home() {
                 <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
                   <Icon name="auto_stories" className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">과학적 단계별 커리큘럼</h3>
+                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">영어·수학 집중 커리큘럼</h3>
                 <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                  초·중·고등학생 각 연령대별 학습 성취 기준에 맞추어 개개인의 취약점을 개선하는 최적의 학습 경로를 탭별로 관리합니다.
+                  초·중·고 핵심 교과 과정 분석을 기반으로, 영역별 개념 학습부터 수능 실전 대비까지 1:1 맞춤 진도를 통해 학습 효과를 극대화합니다.
                 </p>
               </div>
               <Link href="/curriculum" className="text-xs font-bold text-secondary flex items-center gap-1.5 hover:underline mt-6">
