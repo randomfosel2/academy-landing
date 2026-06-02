@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
       <div className="max-w-[1200px] mx-auto px-6 py-8 border-t border-slate-200/50 text-center md:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-[11px] text-slate-400 font-medium">
-          © 2024 엑설런스 아카데미. All rights reserved. 정식 등록 교육 기관.
+          © {new Date().getFullYear()} 엑설런스 아카데미. All rights reserved. 정식 등록 교육 기관.
         </p>
         <div className="flex gap-3">
           <a href="#" className="w-8 h-8 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-400 hover:text-secondary hover:border-secondary transition-all hover:scale-105 shadow-sm">
