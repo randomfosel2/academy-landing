@@ -31,7 +31,6 @@ export default function Header() {
   const navItems = [
     { name: "홈", href: "/" },
     { name: "교육과정", href: "/curriculum" },
-    { name: "원내 활동", href: "/activities" },
     { name: "상담 예약", href: "/reservation" },
     { name: "오시는 길", href: "/contact" },
   ];

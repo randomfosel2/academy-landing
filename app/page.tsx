@@ -151,51 +151,36 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="premium-card p-8 flex flex-col justify-between min-h-[320px]">
-              <div>
-                <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
-                  <Icon name="school" className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">경험이 풍부한 일대일 강사진</h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                  일대일 맞춤지도의 풍부한 노하우를 갖춘 영수 전문 강사진이 개별 학습 속도를 분석하여 세심하고 탄탄한 교육을 제공합니다.
-                </p>
+            <div className="premium-card p-8 flex flex-col min-h-[250px]">
+              <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
+                <Icon name="school" className="w-6 h-6 text-secondary" />
               </div>
-              <Link href="/curriculum" className="text-xs font-bold text-secondary flex items-center gap-1.5 hover:underline mt-6">
-                자세히 보기 <Icon name="arrow_forward" className="w-3.5 h-3.5 text-secondary" />
-              </Link>
+              <h3 className="text-lg font-bold text-black mb-3 font-headline-md">경험이 풍부한 일대일 강사진</h3>
+              <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                일대일 맞춤지도의 풍부한 노하우를 갖춘 영수 전문 강사진이 개별 학습 속도를 분석하여 세심하고 탄탄한 교육을 제공합니다.
+              </p>
             </div>
 
             {/* Card 2 */}
-            <div className="premium-card p-8 flex flex-col justify-between min-h-[320px]">
-              <div>
-                <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
-                  <Icon name="auto_stories" className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">영어·수학 집중 커리큘럼</h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                  초·중·고 핵심 교과 과정 분석을 기반으로, 영역별 개념 학습부터 수능 실전 대비까지 1:1 맞춤 진도를 통해 학습 효과를 극대화합니다.
-                </p>
+            <div className="premium-card p-8 flex flex-col min-h-[250px]">
+              <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
+                <Icon name="auto_stories" className="w-6 h-6 text-secondary" />
               </div>
-              <Link href="/curriculum" className="text-xs font-bold text-secondary flex items-center gap-1.5 hover:underline mt-6">
-                자세히 보기 <Icon name="arrow_forward" className="w-3.5 h-3.5 text-secondary" />
-              </Link>
+              <h3 className="text-lg font-bold text-black mb-3 font-headline-md">영어·수학 집중 커리큘럼</h3>
+              <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                초·중·고 핵심 교과 과정 분석을 기반으로, 영역별 개념 학습부터 수능 실전 대비까지 1:1 맞춤 진도를 통해 학습 효과를 극대화합니다.
+              </p>
             </div>
 
             {/* Card 3 */}
-            <div className="premium-card p-8 flex flex-col justify-between min-h-[320px]">
-              <div>
-                <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
-                  <Icon name="monitoring" className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="text-lg font-bold text-black mb-3 font-headline-md">일대일 밀착 학습 오딧<br />(Learning Audit)</h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                  일일 학습 피드백 시스템과 정기 리포트 발행을 바탕으로, 단 한 명의 학생도 학업의 흐름을 놓치지 않도록 관리합니다.
-                </p>
+            <div className="premium-card p-8 flex flex-col min-h-[250px]">
+              <div className="bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-2xl text-secondary mb-6">
+                <Icon name="monitoring" className="w-6 h-6 text-secondary" />
               </div>
-              <Link href="/curriculum" className="text-xs font-bold text-secondary flex items-center gap-1.5 hover:underline mt-6">
-                자세히 보기 <Icon name="arrow_forward" className="w-3.5 h-3.5 text-secondary" />
-              </Link>
+              <h3 className="text-lg font-bold text-black mb-3 font-headline-md">일대일 밀착 학습 오딧<br />(Learning Audit)</h3>
+              <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                일일 학습 피드백 시스템과 정기 리포트 발행을 바탕으로, 단 한 명의 학생도 학업의 흐름을 놓치지 않도록 관리합니다.
+              </p>
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Icon from "../../components/Icon";
 
 interface Subject {
@@ -121,7 +120,7 @@ export default function Curriculum() {
             {currentCurriculum.subjects.map((subject, idx) => (
               <div
                 key={idx}
-                className="premium-card p-8 flex flex-col items-start justify-between min-h-[300px]"
+                className="premium-card p-8 flex flex-col items-start min-h-[240px]"
               >
                 <div className="w-full space-y-4">
                   <div className="flex justify-between items-center w-full">
@@ -137,14 +136,6 @@ export default function Curriculum() {
                     {subject.desc}
                   </p>
                 </div>
-                
-                <Link
-                  href="#"
-                  className="mt-6 font-bold text-xs text-secondary hover:underline flex items-center gap-1 group"
-                >
-                  과정 상세정보 
-                  <Icon name="arrow_forward" className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform text-secondary" />
-                </Link>
               </div>
             ))}
           </div>

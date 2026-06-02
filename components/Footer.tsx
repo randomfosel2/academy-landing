@@ -31,11 +31,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/activities" className="text-xs text-slate-500 hover:text-secondary font-semibold transition-colors">
-                  원내 활동
-                </Link>
-              </li>
-              <li>
                 <Link href="/reservation" className="text-xs text-slate-500 hover:text-secondary font-semibold transition-colors">
                   상담 예약
                 </Link>
