@@ -206,12 +206,6 @@ export default function Home() {
               >
                 상담 예약 시작하기
               </Link>
-              <Link
-                href="/contact"
-                className="border border-slate-700 text-slate-200 text-center py-4 px-8 rounded-full font-bold text-sm hover:bg-slate-800 transition-all"
-              >
-                캠퍼스 투어 정보
-              </Link>
             </div>
           </div>
         </div>
