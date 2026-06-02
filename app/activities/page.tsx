@@ -23,7 +23,7 @@ export default function Activities() {
       date: "2024년 10월 24일",
       title: "겨울방학 대비 1:1 영수 개별 진도 지도 설명회 개최",
       desc: "학부모님들을 모시고 자녀의 학습 성향 및 과목별 취약점 분석, 그리고 이번 겨울방학 동안 진행될 1:1 개인 맞춤형 영어·수학 학습 진도 플랜을 상세히 설명해 드리는 자리를 마련했습니다.",
-      imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAawSQpnmqxLite3aO6IeXNCOBvSyCx0dtLorL8YuOFWGkyztO6oOvwckocJcCmT3WKEiLce3WDtktx6f5qiyb5HjG0MOusdaZwMA06gFWH-fCl_Mo8IIZ3BTPmzmgw60Cg9UiucU6P7J06xQGYggN9NApgQDR65j230KUoL0HGdI0Tk-UV7ikvtHtJETyf8EjwNw-vtotTMxlXCSee9545ZS8otVYbBoda3JGkPH_CDDIUMATAvPx8ibl0yGN1olOMrnnUc-S5mT_r"
+      imgUrl: "/activities/winter_seminar.png"
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ export default function Activities() {
       date: "2024년 10월 22일",
       title: "2025학년도 수능 영어·수학 출제 경향 및 1:1 전략",
       desc: "최근 수능 및 평가원 모의고사의 출제 경향을 면밀히 분석하고, 절대평가 영어 1등급 공략법과 변별력 높은 수리 영역 킬러/준킬러 문항에 대한 개인 맞춤형 대비법을 제시합니다.",
-      imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNtxpJY4OqfcmYs2pjJWb87rG3hChIDLAewS9j64tKUHHcZujFfaIBfLhcmc7k01qw0fg57sXwLS2rT9cheSLBu-hhsXrPRAeedit0aGSQrpgr1VwjFplB2h0Hj47VFgXutq-sTQMfZFYRmQVlTqcoXgWyF9jIJe3edI5FusBmFjg8yAhNOtc5-nyUgHSqPi5XpmgfoWuL7yibTSDzVr3sXXBNu0P58IwDjI5UBdz80ewGFpIXQgdsnZkepK85_-16KYmD6m0YPaX6"
+      imgUrl: "/activities/exam_strategy.png"
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ export default function Activities() {
       date: "2024년 10월 20일",
       title: "2학기 중간고사 내신 우수 및 성적 수직 상승생 발표",
       desc: "철저한 1:1 오답 관리와 밀착 지도를 통해 이번 2학기 중간고사에서 영어·수학 1등급을 달성하거나 성적이 큰 폭으로 향상된 엑설런스 아카데미 원생들을 칭찬하고 축하합니다.",
-      imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD3oGSApJdC1B9OSSauPTTGsI6SopIZOER95sfCD7_5GodPitSYwNrsG8kyjZwFy8cwWfWxsu1RvUgc4JEdM7uEZOxAC5VadtUCQz4OE4z4xX3TPzczscvWXA1kJ3t9KpILi5HTDKbRYoTiZ6GQljw01P1sB7YtS3IxIvKpVW0jDSPzdvYR2ayGDDzhUqAH5biZfcKE8QtsB4KdpqreqWaUAUKIlVFdonIOFpEGyq1TokYPws5QnPepXGXt78VD0f_Ezk8E-oYtWB0B"
+      imgUrl: "/activities/grade_improvement.png"
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ export default function Activities() {
       date: "2024년 10월 18일",
       title: "초등부 이스턴영어 파닉스 및 매일 영단어 녹음 챌린지",
       desc: "초등 저학년 학생들이 영어에 흥미를 느끼고 스스로 공부하는 습관을 기를 수 있도록 마련된 파닉스 발음 및 일일 영단어 말하기 녹음 챌린지 활동 소식을 전해드립니다.",
-      imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0-wgEG9IIJ50RODWvrCAYhc9cwtGVIos9ExDYRtCoTNAaNxEIYEUrz5fidQ0ep8lxl2qZ4BzhTbzW9xp1Q4BgR03Qfp75THBbJA_w_L3Rui5v-hC-dNZBlg9OjTrDViBYV0Ds_P1PnAD8johdiwwlZWOBU_awMnM4LSFT7s-UegsOC-6vu87OLLV4jaEVLD74M0y3BzHIOl3pK4OJVi0plLn7U0DTzdWLBQBy9xtEpqC12eRttYGTNgHTqvmIFG694C_TH860PSPP"
+      imgUrl: "/activities/speaking_challenge.png"
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ export default function Activities() {
       date: "2024년 10월 15일",
       title: "전국 영어·수학 학력평가(HME) 우수 성적 및 수상 달성",
       desc: "본원의 체계적인 1:1 맞춤 모의 훈련과 개별 첨삭 지도를 바탕으로 전국 단위 영수 학력평가에 응시하여 다수의 원생들이 최우수상 및 메달을 획득하는 빛나는 성과를 거두었습니다.",
-      imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtJZ9sZeQp9l213UW2etqsh2n3Kk9EB9sl-5dsmaJuHFaI1118q5fciUrdffKvm6csTXgKJqfCYUepztwyC-j9unnvVKmquC8QYiihxUW5SjpnnSsw11b9EvjBFoikp_2UEoWDQqAzWIHwp-vE-Es_Djkj_wFdmBDaa9AThz7OaumZq6qJ7H3hUp70lYgqZ5UMuMb9O9XvBrUQuFgA_sIan0k8S77pOuzoaVp3GXexMQn9TW91ix0EQVXAufrLNfKEYENhO_gnr3rk"
+      imgUrl: "/activities/award_achievement.png"
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ export default function Activities() {
       date: "2024년 10월 12일",
       title: "인근 학교별 기출 분석 기반 수행평가 일대일 집중 관리",
       desc: "중·고등부 내신 관리를 정밀하게 밀착 지원하기 위해 학교별 최근 3개년 기출 족보를 분석하여 맞춤 오답 풀이를 지도하고 영어 서술형 수행평가를 1:1로 집중 지도합니다.",
-      imgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZnHTwG02su3DhsJ864cUxzzNV3GohNuZHRVnBD4B3dhwGKz0bakOFHLjI6UnMDKO_H95Q_oKJfjQBRuUydM7ciaL0wxSQTpnpvfrVZyK8qdSli9BRoDDl0qhafnuCSBAFieDTUYke5Gho4yrYV-heQSH5Mg019CF2exD-sbZXgFN9VUgPYoBYHBFPhB9vL4Yl21G4x_-J1QNCSshr6D2EvF-zEfzwINHNU1yE9LIwfVJyTXvNrVGC2aaSLo-WuX14BgMLtw_7mftf"
+      imgUrl: "/activities/writing_coaching.png"
     }
   ];
 
