@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 엑설런스 아카데미 (Excellence Academy) 랜딩 페이지
 
-## Getting Started
+> **1:1 맞춤지도 초중고 영수전문학원**  
+> 본 프로젝트는 '엑설런스 아카데미'의 교육 철학과 1:1 맞춤형 커리큘럼을 효과적으로 전달하기 위해 제작된 고품질의 반응형 프리미엄 랜딩 페이지입니다.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 배포 정보
+*   **실서버 서비스 URL**: [https://excellence-academy-kappa.vercel.app](https://excellence-academy-kappa.vercel.app)
+*   **배포 플랫폼**: Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ 주요 특징 및 수정 사항 (최종본)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **블로그 스타일 제거 및 레이아웃 간소화**
+    - 사이트를 더욱 단일 목적의 전문적인 랜딩 페이지처럼 구성하기 위해 기존의 복잡한 "원내 활동" 블로그 페이지를 과감히 제거했습니다.
+    - 메인 페이지 및 커리큘럼 소개 카드의 불필요한 상세 보기 링크("자세히 보기", "과정 상세정보" 등)를 모두 정리하고, 카드 높이를 컴팩트하게 정돈하여 직관성을 극대화했습니다.
 
-## Learn More
+2. **1:1 맞춤형 초중고 영수 커리큘럼 정보 제공**
+    - **초등부**: 이스턴영어 기반의 말하기/파닉스 및 수학 연산 기초 1:1 집중 관리
+    - **중등부**: 학교별 내신 완벽 분석 및 개인 취약점 정밀 리포트 분석
+    - **고등부**: 수능 영어/수학 절대평가 대비 및 1:1 대입 입시 로드맵 전략 수립
 
-To learn more about Next.js, take a look at the following resources:
+3. **고품질 일러스트 Open Graph (OG) 이미지 적용**
+    - 학부모 및 학생에게 따뜻하고 친근하며 학업 성취감을 줄 수 있는 맞춤형 일러스트 그래픽을 생성하여 반영했습니다.
+    - 공유 시 노출될 썸네일(OG 이미지) 상단에 **'End of School'** 영문 텍스트가 심플하게 포함되어 있습니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **방문 및 상담 예약의 단일화**
+    - 불필요한 캠퍼스 투어 다운로드나 투어 신청 프로세스를 일원화하여, 핵심 행동 유도 버튼인 **"상담 예약 시작하기"**로 사용자의 동선이 집중되도록 UI를 대폭 단순화했습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠 기술 스택
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Language**: TypeScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 로컬 실행 방법
+
+1. **패키지 설치**
+   ```bash
+   npm install
+   ```
+
+2. **개발 서버 실행**
+   ```bash
+   npm run dev
+   ```
+   로컬 브라우저에서 `http://localhost:3000`으로 접속하여 결과를 확인하실 수 있습니다.
+
+3. **프로덕션 빌드**
+   ```bash
+   npm run build
+   ```
