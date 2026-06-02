@@ -28,10 +28,13 @@ const setupSMSNotificationListener = () => {
     const { guardianName, phone, date, time, status } = customEvent.detail;
     
     if (status === "예약확정") {
-      // Mock SMS Send Logic
       const smsMessage = `[엑설런스 아카데미] ${guardianName}님, 예약이 확정되었습니다. 일시: ${date} ${time}`;
       console.log(`%c[SMS API Dispatch] 문자가 발송되었습니다. 수신처: ${phone} / 내용: ${smsMessage}`, "color: #38bdf8; font-weight: bold;");
       alert(`[자동 SMS 알림 발송 - Phase 2 데모]\n\n수신처: ${phone}\n내용: ${smsMessage}`);
+    } else if (status === "예약취소") {
+      const smsMessage = `[엑설런스 아카데미] ${guardianName}님, 예약이 취소되었습니다. 문의 사항이 있으시면 대표 번호로 연락 바랍니다.`;
+      console.log(`%c[SMS API Dispatch] 취소 안내 문자가 발송되었습니다. 수신처: ${phone} / 내용: ${smsMessage}`, "color: #f87171; font-weight: bold;");
+      alert(`[자동 SMS 알림 발송 - 취소 안내]\n\n수신처: ${phone}\n내용: ${smsMessage}`);
     }
   };
 
@@ -99,7 +102,6 @@ export default function AdminDashboard() {
       if (res.id === id) {
         const newStatus = "예약확정";
         
-        // Dispatch Custom Event for loose coupling
         const event = new CustomEvent("reservation-status-change", {
           detail: {
             id: res.id,
@@ -117,6 +119,40 @@ export default function AdminDashboard() {
       return res;
     });
 
+    setReservations(updated);
+    localStorage.setItem("academy_reservations", JSON.stringify(updated));
+  };
+
+  const handleCancelReservation = (id: number) => {
+    if (!confirm("정말로 이 예약을 취소 처리하시겠습니까?")) return;
+    const updated = reservations.map((res) => {
+      if (res.id === id) {
+        const newStatus = "예약취소";
+        
+        const event = new CustomEvent("reservation-status-change", {
+          detail: {
+            id: res.id,
+            guardianName: res.guardianName,
+            phone: res.phone,
+            date: res.date,
+            time: res.time,
+            status: newStatus,
+          }
+        });
+        window.dispatchEvent(event);
+
+        return { ...res, status: newStatus };
+      }
+      return res;
+    });
+
+    setReservations(updated);
+    localStorage.setItem("academy_reservations", JSON.stringify(updated));
+  };
+
+  const handleDeleteReservation = (id: number) => {
+    if (!confirm("정말로 이 예약 내역을 영구 삭제하시겠습니까?")) return;
+    const updated = reservations.filter((res) => res.id !== id);
     setReservations(updated);
     localStorage.setItem("academy_reservations", JSON.stringify(updated));
   };
@@ -220,6 +256,8 @@ export default function AdminDashboard() {
                       <span className={`inline-flex px-2.5 py-1 text-xs font-bold rounded-full ${
                         res.status === "예약확정"
                           ? "bg-green-100 text-green-800"
+                          : res.status === "예약취소"
+                          ? "bg-red-100 text-red-800"
                           : "bg-orange-100 text-orange-800"
                       }`}>
                         {res.status}
@@ -254,19 +292,51 @@ export default function AdminDashboard() {
                     </td>
                     {/* Confirm Button */}
                     <td className="py-4 px-6 text-center">
-                      {res.status === "접수대기" ? (
+                      <div className="flex items-center justify-center gap-2">
+                        {res.status === "접수대기" && (
+                          <>
+                            <button
+                              onClick={() => handleConfirmReservation(res.id)}
+                              className="px-3 py-1.5 bg-secondary text-white hover:opacity-90 text-[11px] font-semibold rounded-lg shadow-sm transition-all"
+                            >
+                              확정
+                            </button>
+                            <button
+                              onClick={() => handleCancelReservation(res.id)}
+                              className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg border border-slate-200 shadow-sm transition-all"
+                            >
+                              취소
+                            </button>
+                          </>
+                        )}
+                        {res.status === "예약확정" && (
+                          <>
+                            <span className="text-green-600 font-bold text-xs flex items-center gap-1 mr-1">
+                              <Icon name="check" className="w-3.5 h-3.5 text-green-600" />
+                              확정됨
+                            </span>
+                            <button
+                              onClick={() => handleCancelReservation(res.id)}
+                              className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg border border-slate-200 shadow-sm transition-all"
+                            >
+                              취소
+                            </button>
+                          </>
+                        )}
+                        {res.status === "예약취소" && (
+                          <span className="text-red-500 font-bold text-xs flex items-center gap-1 mr-2">
+                            <Icon name="close" className="w-3.5 h-3.5 text-red-500" />
+                            취소됨
+                          </span>
+                        )}
                         <button
-                          onClick={() => handleConfirmReservation(res.id)}
-                          className="px-3.5 py-1.5 bg-secondary text-white hover:opacity-90 text-xs font-semibold rounded-lg shadow-sm transition-all"
+                          onClick={() => handleDeleteReservation(res.id)}
+                          className="p-1.5 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-all ml-1"
+                          title="삭제"
                         >
-                          예약 확정
+                          <Icon name="delete" className="w-4 h-4" />
                         </button>
-                      ) : (
-                        <span className="text-gray-400 font-semibold text-xs flex items-center justify-center gap-1">
-                          <Icon name="check" className="w-3.5 h-3.5 text-green-500" />
-                          확정 완료
-                        </span>
-                      )}
+                      </div>
                     </td>
                   </tr>
                 ))
